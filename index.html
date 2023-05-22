@@ -2,6 +2,15 @@
 <html>
 <head>
   <style>
+    @keyframes zoomIn {
+      from {
+        transform: scale(0);
+      }
+      to {
+        transform: scale(1);
+      }
+    }
+
     body {
       display: flex;
       flex-direction: column;
@@ -12,13 +21,6 @@
       background-color: black;
     }
 
-    .button-container {
-      display: flex;
-      justify-content: center;
-      margin-top: auto;
-      margin-bottom: auto;
-    }
-
     .button {
       background-color: #301934;
       color: white;
@@ -27,9 +29,14 @@
       font-size: 20px;
       font-family: 'Homework', sans-serif;
       box-shadow: 0 0 10px 4px #301934;
-      transition: transform 0.3s, background-color 0.3s;
+      transition: background-color 0.3s;
       text-decoration: none;
       display: inline-block;
+      animation: zoomIn 0.5s forwards;
+    }
+
+    .button:hover {
+      background-color: #CBC3E3; /* Change to desired color */
     }
 
     .heading {
@@ -37,14 +44,11 @@
       color: #800080;
       font-size: 36px;
       margin-top: 20px;
-      animation: oscilate 2s infinite linear;
     }
   </style>
 </head>
 <body>
   <h1 class="heading">PvP Pack</h1>
-  <div class="button-container">
-    <a href="https://www.mediafire.com/file/usneft4ur97ohnx/%2521_%25C2%25A79venomous.zip/file" class="button">Download</a>
-  </div>
+  <a href="#" class="button">Download</a>
 </body>
 </html>
